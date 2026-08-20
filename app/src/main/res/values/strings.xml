@@ -42,7 +42,7 @@
     <string name="background_recog">后台识别已开启</string>
     <string name="digit">数字识别</string>
     <string name="unknown">未知</string>
-    <string name="about_text">ARI 识图 v2.9 — 删除标签会清掉图片、热力图、适应层，并从界面消失。</string>
+    <string name="about_text">ARI Vision v2.9 — Algebraic Residual Iteration. Algorithm: Zhou Juncai (white-paper author). Engineering: deepseek. Symbolic reasoning: NLM-AGI. White paper: https://doi.org/10.5281/zenodo.21968497</string>
     <string name="sample_demo">%1$s</string>
     <string name="debug_info">%1$s</string>
 </resources>

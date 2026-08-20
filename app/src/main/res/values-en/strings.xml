@@ -42,7 +42,7 @@
     <string name="background_recog">Background recognition enabled</string>
     <string name="digit">Digit Recognition</string>
     <string name="unknown">Unknown</string>
-    <string name="about_text">ARI Recognition v2.5 — auto-focus on the subject in messy screenshots, reject empty-region boxes, rotation-safe overlay. Built-in MNIST 93.1%.</string>
+    <string name="about_text">ARI Recognition v2.6 — inject the full image (no crop); detector finds the subject; tracks through background change and motion; rotation-safe. Last 100 logs, download zip by severity.</string>
     <string name="sample_demo">%1$s</string>
     <string name="debug_info">%1$s</string>
 </resources>

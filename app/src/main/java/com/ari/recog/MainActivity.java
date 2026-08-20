@@ -90,8 +90,8 @@ public class MainActivity extends AppCompatActivity {
                 v -> open(SettingsActivity.class, "Open SettingsActivity")));
 
         TextView about = UiKit.label(this,
-                zh() ? "ARI v2.9  ·  删标签即从界面消失  ·  资源释放"
-                     : "ARI v2.9  ·  delete label leaves the UI  ·  resources freed",
+                zh() ? "ARI v2.9  ·  算法 Zhou Juncai  ·  工程 deepseek  ·  符号推理 NLM-AGI\n白皮书 https://doi.org/10.5281/zenodo.21968497"
+                     : "ARI v2.9  ·  Algorithm: Zhou Juncai  ·  Engineering: deepseek  ·  Symbolic reasoning: NLM-AGI\nWhite paper: https://doi.org/10.5281/zenodo.21968497",
                 UiKit.MUTED, 12);
         about.setPadding(0, UiKit.dp(this, 16), 0, 0);
         col.addView(about);

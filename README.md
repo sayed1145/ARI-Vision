@@ -1,37 +1,54 @@
-# ARI Vision · ARI 识图
+# ARI Vision
 
-Android 屏幕实时识别。同标签多图合模、热力图、横竖屏自适应。
+Android real-time screen recognition powered by **Algebraic Residual Iteration (ARI)**.
 
-**当前版本：v2.9**（versionCode 11）
+**Current version: v2.9** (versionCode 11)
 
-## 下载 APK
+## Download APK
 
-到 Releases 页下载安装包：
+Get the installer from the Releases page:
 
 **https://github.com/sayed1145/ARI-Vision/releases/latest**
 
-或仓库内：[`apk/ARIRecog-v2.9-debug.apk`](apk/ARIRecog-v2.9-debug.apk)
+Or from the repo: [`apk/ARIRecog-v2.9-debug.apk`](apk/ARIRecog-v2.9-debug.apk)
 
-## 功能
+## Technical white paper
 
-- 屏幕实时框选；全图注入（不强制裁剪）
-- 同名标签 = 同一物体，多图合模去噪
-- 热力图可编辑；模板显式公式
-- 一次添加 / 删除多张图；改名；删除标签会清图片、热力图、适应层并从界面消失
-- 横竖屏自动重建捕获，框不飞出屏幕
-- 在线适应层不写基座 `arimodel.bin`
+This app implements ideas from:
 
-## 源码
+> Zhou, Juncai. *The Mixed-Group Framework and Algebraic Residual Iteration (ARI): From Structural Unification to Efficient Learning.* Zenodo, 2026.  
+> **https://doi.org/10.5281/zenodo.21968497**
 
-Android 工程在本仓库根目录。`app/src/main/java/com/ari/recog/` 为 Java 源码。
+ARI is a gradient-free algebraic residual iteration method (closed-form least squares + residual iteration).
 
-## 构建
+## Developers
 
-需要 Android SDK 与 JDK 17+。
+| Role | Credit |
+| --- | --- |
+| Algorithm invention (white-paper author) | **Zhou Juncai** |
+| Software engineering | **deepseek** |
+| Symbolic reasoning | **NLM-AGI** |
+
+## Features
+
+- Live screen boxes; inject a full screenshot (no forced crop)
+- Same label name = same object; multi-shot consensus drops background noise
+- Editable heatmap; explicit template formula
+- Batch add / delete; rename a label; deleting a label removes images, heatmap, adapt data, and the label from the UI
+- Portrait / landscape capture rebuild so boxes stay on screen
+- Online adapt layer does **not** write the base `arimodel.bin`
+
+## Source
+
+Android project at the repository root. Java sources: `app/src/main/java/com/ari/recog/`.
+
+## Build
+
+Android SDK and JDK 17+.
 
 ```bash
-# 写入 local.properties: sdk.dir=/path/to/android-sdk
+# local.properties: sdk.dir=/path/to/android-sdk
 ./gradlew assembleDebug
 ```
 
-产物：`app/build/outputs/apk/debug/app-debug.apk`
+Output: `app/build/outputs/apk/debug/app-debug.apk`
