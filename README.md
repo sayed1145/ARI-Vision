@@ -10,16 +10,14 @@ Get the installer from the Releases page:
 
 **https://github.com/sayed1145/ARI-Vision/releases/latest**
 
-Or from the repo: [`apk/ARIRecog-v2.9-debug.apk`](apk/ARIRecog-v2.9-debug.apk)
+## Technical white paper and this implementation
 
-## Technical white paper
-
-This app implements ideas from:
+The original paper is the **naive / reference ARI** (closed-form least squares + algebraic residual iteration):
 
 > Zhou, Juncai. *The Mixed-Group Framework and Algebraic Residual Iteration (ARI): From Structural Unification to Efficient Learning.* Zenodo, 2026.  
 > **https://doi.org/10.5281/zenodo.21968497**
 
-ARI is a gradient-free algebraic residual iteration method (closed-form least squares + residual iteration).
+**This repository is not that naive implementation.** It is an **engineering ARI variant**: the same algebraic core, extended for real-time screen recognition (multi-shot consensus, heatmap attention, online adapt, rotation-safe tracking). Stronger in the product sense; the paper remains the theoretical source.
 
 ## Developers
 
