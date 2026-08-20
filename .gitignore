@@ -1,0 +1,13 @@
+.gradle/
+**/build/
+.idea/
+*.iml
+local.properties
+*.log
+.DS_Store
+*.apk.idsig
+videos/
+**/*.mp4
+**/*.mov
+.arena/
+node_modules/
